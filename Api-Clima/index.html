@@ -113,7 +113,7 @@ button:hover {
             return;
         }
 
-        // CORREGIDO: ahora sí usa backticks
+        
         const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}${country ? "," + country : ""}&appid=${API_KEY}&units=metric&lang=es`;
 
         fetch(API_URL)
@@ -138,7 +138,7 @@ function displayWeather(data) {
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
 
-    // CORREGIDO: ahora sí funciona
+  
     weatherinfoDiv.innerHTML = `
         <h2>Clima en ${cityName}</h2>
         <p><strong>Temperatura:</strong> ${temp} °C</p>
